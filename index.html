@@ -6,7 +6,7 @@
 <style>
 	body,h1,p{margin: 0px;}
 
-	.rain{width: 10px; height: 10px; border-radius: 5pt; background: white; position: absolute; animation: rr 0.3s infinite ease-in; left: 200px;}
+	.rain{width: 10px; height: 10px; border-radius: 5pt; background: white; position: absolute; animation: rr 0.3s infinite ease-in-out; left: 200px;}
 
 	.wrap{width: 1200px; margin: auto; height: 800px;
 		}
@@ -20,10 +20,6 @@
 			background-size: cover; 
 			 position: absolute;}
 
-	.hd{background-image: url(1.png);
-		background-size: cover;
-		width: 500px; 
-		position: absolute;}
 
 	.fro{width: 300px; position: absolute; left: 430px; top: -150px;}
 
@@ -99,11 +95,11 @@
 
 		<script type="text/javascript">
 
-		for(var i=0; i<40; i++){
+		for(var i=0; i<50; i++){
 			var b = rrr.cloneNode(true);
 			b.id = i;
-			b.style.left = Math.random()*1400+"px";
-			// b.style.height = Math.random()*10+"px";
+			b.style.left = Math.random()*1600+"px";
+			 // b.style.height = Math.random()*30+"px";
 			b.style.animationDuration = Math.random()*30 +"s";
 			// b.style.animationDelay =+"s";
 			// b.style.background = randomColor();
