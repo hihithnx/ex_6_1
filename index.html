@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>겨울왕국</title>
+
+<style>
+	body,h1,p{margin: 0px;}
+
+	.rain{width: 10px; height: 10px; border-radius: 5pt; background: white; position: absolute; animation: rr 0.3s infinite ease-in; left: 100px;}
+
+	.wrap{width: 1200px; margin: auto; height: 800px;
+		}
+
+	@keyframes rr{
+		from{bottom: 800px; opacity: 0.8;}
+		to{ bottom: 0px; opacity: 1;}
+	}
+
+	#frozen{background-image: url(4435.jpg);
+			background-size: cover; 
+			 position: absolute;}
+
+	.hd{background-image: url(1.png);
+		background-size: cover;
+		width: 500px; 
+		position: absolute;}
+
+	.fro{width: 300px; position: absolute; left: 430px; top: -150px;}
+
+	.elsa{position: absolute; width: 300px; left: 520px;}
+
+	.anna{position: absolute; width: 280px; left: 200px;}
+
+	.prin{position: absolute; width: 330px; left: 700px; }
+
+	.olaf{position: absolute; width: 250px; left: 400px; top: 400px;}
+
+	.elsa:hover{transform: rotate(-5deg);}
+
+	.anna:hover{transform: rotate(7deg);}
+
+	.prin:hover{transform: rotate(-8deg);}
+
+	.olaf:hover{transform: rotate(10deg); }
+
+	
+
+
+
+	
+</style>	
+</head>
+<body>
+<!-- 비를 복사해서 내리게 하기 -->
+	
+
+	<header>
+
+		<div class="rain" id="rrr"></div>
+
+
+
+		<div style="height: 180px;"></div>
+			<div class="wrap">
+				<div id="frozen" class="wrap">
+				<div>
+				<img src="1.png" class="fro">
+				</div>
+				<div>
+					<img src="start.png" id="q" style="width: 70px; top: -150px;">
+	
+				<audio src="sang.mp3" id="sang1" ></audio>
+
+				</div>
+				<div>
+					<img src="3.png" class="elsa">
+				</div>
+
+				<div>
+					<img src="45.png" class="anna">
+				</div>
+
+				<div>
+					<img src="1412.png" class="prin">
+				</div>
+
+				<div>
+					<img src="141.png" class="olaf">
+				</div>
+
+				
+			</div>
+		</header>
+
+
+
+
+
+
+		<script type="text/javascript">
+
+		for(var i=0; i<40; i++){
+			var b = rrr.cloneNode(true);
+			b.id = i;
+			b.style.left = Math.random()*1400+"px";
+			// b.style.height = Math.random()*10+"px";
+			b.style.animationDuration = Math.random()*30 +"s";
+			// b.style.animationDelay =+"s";
+			// b.style.background = randomColor();
+			document.body.appendChild(b);
+			b.onmouseover = function(){}
+			b.onclick = function(){
+				alert(this.id);
+			}
+			document.body.appendChild(b);
+		}
+
+			var qstate = "off";
+
+		q.onclick = function(){
+			if(qstate == "off"){
+			
+			sang1.play();
+			qstate = "on";
+		}else{
+			
+			sang1.pause();
+			qstate = "off"}
+		}
+
+
+
+
+		
+		</script>
+
+	</div>
+
+</body>
+</html>
+
+<!-- 이벤트 종류 여러가지 onkey onmouse 등등 -->
+<!-- 반복과 배열이 코딩의 꽃 -->
+<!-- 반복 for, 배열 array -->
+<!-- 비를 복사해서 넣어보기 -->
+
+<!-- forwards 한번작동, infinite 계속반복, https://cafe.naver.com/daoustyle/950 참고 -->
